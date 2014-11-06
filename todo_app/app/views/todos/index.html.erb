@@ -1,0 +1,29 @@
+<h1>Foundation Todos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @todos.each do |todo| %>
+      <tr>
+        <td><%= todo.title %></td>
+        <td><%= todo.notes %></td>
+        <td><%= link_to 'Show', todo, class: 'button tiny radius' %></td>
+        <td><%= link_to 'Edit', edit_todo_path(todo), class: 'button tiny radius' %></td>
+        <td><%= link_to 'Delete', todo, method: :delete, data: { confirm: 'Are you sure? This action cannot be undone!' }, class: 'button tiny radius' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Create New Todo', new_todo_path, class: 'button success radius tiny' %>
+
+

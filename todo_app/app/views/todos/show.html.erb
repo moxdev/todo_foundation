@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="show-form">
+  <table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <td><%= @todo.title %></td>
+    <td><%= @todo.notes %></td>
+  </tbody>
+</table>
+<br>
+    <td><%= link_to 'Back', todos_path, class: 'button radius tiny' %></td>
+    <td><%= link_to 'Edit', edit_todo_path(@todo), class: 'button success radius tiny' %></td>
+<div>
